@@ -31,7 +31,8 @@ document.onkeyup = function(type) {
 
     if (userInput === selectedLetter) {
         wins++;
-        alert("You Win!")
+        alert("You Win!");
+        selectRandomLetter();
     }
     if (userInput === checkIfAlreadyGuessed) {
         alert("You already guessed that letter!  Try again!");
@@ -49,6 +50,7 @@ document.onkeyup = function(type) {
         document.querySelector("#guesses-left").innerHTML = "Guesses Left: 0";
         document.querySelector("#your-guesses").innerHTML = "Your Guesses so far: ";
         guessesLeft = maxGuesses;
+        selectRandomLetter();
     }
 
 }
